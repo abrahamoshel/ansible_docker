@@ -1,0 +1,13 @@
+---
+
+  - name: create docker path
+    file: path=/opt/docker/nginx state=directory
+
+  - name: copy dockerfile
+    copy: src=nginx/Dockerfile dest=/opt/docker/nginx/Dockerfile mode=755
+
+  - name: build nginx
+    docker_image: path=/opt/docker/nginx/ name=abraham/nginx state=build
+
+  - name: run nginx servers
+    docker: image=abraham/nginx count=3

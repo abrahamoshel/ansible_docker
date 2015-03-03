@@ -1,0 +1,18 @@
+---
+
+- name: Add docker signing key
+  apt_key: url=https://get.docker.io/gpg state=present
+
+- name: Add docker repository
+  apt_repository: repo="{{ item }}" state=present
+  with_items:
+    - "deb http://get.docker.io/ubuntu docker main"
+
+- name: Update apt cache
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: Install docker
+  apt: name=lxc-docker state=present
+
+- name: Install docker python
+  pip: name=docker-py state=present
