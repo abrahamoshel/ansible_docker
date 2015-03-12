@@ -3,7 +3,7 @@
 #
 # Run with: ansible-playbook main.yml -i localdev --ask-vault-pass
 - hosts: ubuntuops
-  remote_user: ubuntu
+  user: ubuntu
   sudo: yes
   roles:
     - common
