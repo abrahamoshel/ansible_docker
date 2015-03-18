@@ -5,8 +5,13 @@
 - hosts: ubuntuops
   user: ubuntu
   sudo: yes
+  vars:
+    apps_and_paths:
+      - {name: "app", path: "/opt/app/log/*.log"}
   roles:
     - common
-    - docker
-    - docker_concept
+    - logrotate
+    # - docker
+    # - github
+    # - docker_concept
 

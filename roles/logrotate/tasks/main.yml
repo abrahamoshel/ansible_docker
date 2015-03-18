@@ -1,0 +1,5 @@
+---
+
+- name: Create Application logrotate.d files
+  template: src=approtation.conf dest=/etc/logrotate.d/{{item.name}} owner=root group=root mode=0600
+  with_items: apps_and_paths
