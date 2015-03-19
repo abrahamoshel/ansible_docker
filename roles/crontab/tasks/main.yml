@@ -1,0 +1,13 @@
+---
+
+- name: Apt Install specifics for Service App
+  apt: name=python3-pip state=present
+  with_items: apts
+
+- name: Install Service App Pip Dependencies
+  pip: name=bottle executable=pip3
+  with_items: pip3s
+
+- name: Create Cron Tasks for the service to run
+  cron: name="{{item.name}}" minute="{{item.minute}}" hour="{{item.hour}}" job="{{item.task}}" user="ubuntu"
+  with_items: jobs

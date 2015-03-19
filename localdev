@@ -1,2 +1,22 @@
 [ubuntuops]
 localhost ansible_ssh_port=2222
+
+[popularity]
+localhost1 ansible_connection=local ansible_ssh_port=2222
+
+[content-hub]
+localhost2 ansible_connection=local ansible_ssh_port=2223
+
+[www]
+localhost3 ansible_connection=local ansible_ssh_port=2224
+
+[contests]
+localhost4 ansible_connection=local ansible_ssh_port=2225
+
+
+
+[allboxes:children]
+popularity
+content-hub
+www
+contests

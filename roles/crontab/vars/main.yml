@@ -1,0 +1,27 @@
+---
+
+apts:
+  - libpq-dev
+  - python3-pip
+
+pip3s:
+  - requests
+  - psycopg2
+  - ipython
+  - responses
+  - pytest
+  - nose
+
+jobs:
+  - {
+      name: "coupon feed",
+      minute: "0",
+      hour: "*/2",
+      task: "cd /home/ubuntu/tasks/ && ./app.sh"
+    }
+  - {
+      name: "popularity update",
+      minute: "0",
+      hour: "*/2",
+      task: "curl -X POST curl -X POST http://jsonplaceholder.typicode.com/posts"
+    }

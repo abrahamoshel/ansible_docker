@@ -1,0 +1,6 @@
+Host github.com
+     User git
+     IdentityFile /root/.ssh/app.deploy
+     IdentitiesOnly yes
+     UserKnownHostsFile /dev/null
+     StrictHostKeyChecking no
