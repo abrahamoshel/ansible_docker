@@ -1,0 +1,4 @@
+---
+
+apps_and_paths:
+  - {name: "contests", path: "/opt/contests/log/*.log", duration: "daily"}

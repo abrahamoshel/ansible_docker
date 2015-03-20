@@ -1,17 +1,14 @@
 ---
+
 # Configuration of base development image.
 #
 # Run with: ansible-playbook main.yml -i localdev --ask-vault-pass
 - hosts: ubuntuops
   user: ubuntu
   sudo: yes
-  vars:
-    apps_and_paths:
-      - {name: "app", path: "/opt/app/log/*.log"}
   roles:
     - common
-    - logrotate
-    # - docker
-    # - github
-    # - docker_concept
+    - docker
+    - github
+    - docker_concept
 

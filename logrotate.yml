@@ -1,0 +1,11 @@
+---
+
+# Configuration of base development image.
+#
+# Run with: ansible-playbook logrotate.yml -i localdev
+- hosts: allboxes
+  user: ubuntu
+  sudo: yes
+  roles:
+    - common
+    - logrotate

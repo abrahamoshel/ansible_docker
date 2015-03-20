@@ -1,0 +1,4 @@
+---
+
+apps_and_paths:
+  - {name: "popularity", path: "/opt/popularity/log/*.log", rotation: "10"}

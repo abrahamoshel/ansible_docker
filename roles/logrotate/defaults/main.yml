@@ -1,4 +1,5 @@
 ---
 
 apps_and_paths:
+  - {name: "app", path: "/opt/app/log/*.log"}
 

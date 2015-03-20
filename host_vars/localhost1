@@ -1,0 +1,4 @@
+---
+
+apps_and_paths:
+  - {name: "content", path: "/opt/content/log/*.log", maxsize: "size 200M"}
