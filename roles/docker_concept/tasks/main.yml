@@ -12,5 +12,5 @@
   - name: build ruby
     docker_image: path=/opt/docker/ruby/ name=abraham/ruby state=build
 
-  - name: run nginx servers
-    docker: image=abraham/nginx count=3
+  # - name: run nginx servers
+  #   docker: image=abraham/nginx count=3

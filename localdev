@@ -1,22 +1,17 @@
 [ubuntuops]
 localhost ansible_ssh_port=2222
 
-[popularity]
+[rails]
 localhost1 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222
-
-[content-hub]
 localhost2 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2223
 
-[www]
+[go]
 localhost3 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2224
 
-[contests]
+[outlier]
 localhost4 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2225
 
-
-
 [allboxes:children]
-popularity
-content-hub
-www
-contests
+rails
+go
+outlier

@@ -1,0 +1,4 @@
+---
+
+apps_and_paths:
+  - {name: "oshel", path: "/opt/oshel/log/*.log", maxsize: "size 200M"}
